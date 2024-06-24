@@ -223,20 +223,20 @@
 			animation: "slide",
 
 			easing: "swing",
-			direction: "vertical",
+			direction: "horizontal",
 
 			slideshowSpeed: 5000,
 			directionNav: true,
 			start: function(){
 				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+					$('.slider-text').removeClass('animated fadeInRight');
+					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInRight');
 				}, 500);
 			},
 			before: function(){
 				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+					$('.slider-text').removeClass('animated fadeInRight');
+					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInRight');
 				}, 500);
 			}
 
@@ -294,3 +294,27 @@
 
 
 }());
+
+document.addEventListener("DOMContentLoaded", function() {
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.carousel-item');
+    let index = 0;
+    const itemWidth = items[0].offsetWidth;
+
+    function moveCarousel() {
+        index++;
+        if (index >= items.length / 2) {
+            track.style.transition = 'none';
+            index = 0;
+            track.style.transform = `translateX(-${index * itemWidth}px)`;
+            setTimeout(() => {
+                track.style.transition = 'transform 0.5s linear';
+                moveCarousel();
+            }, 50);
+        } else {
+            track.style.transform = `translateX(-${index * itemWidth}px)`;
+        }
+    }
+
+    setInterval(moveCarousel, 2000); // Adjust the interval time as needed
+});

@@ -84,9 +84,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff;
   background: #2D6CDF;
 }
-*{
-  outline: 2px solid red;
-}
+
 .fh5co-nav {
   width: 100%;
   padding: 0;
@@ -528,7 +526,42 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 45px;
   color: #fff;
 }
+.container {
+  text-align: center;
+}
 
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.carousel {
+  position: relative;
+  width: 80%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 20%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 2px solid #eee;
+}
 .course {
   display: -webkit-box;
   display: -moz-box;
@@ -714,7 +747,7 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   right: 0;
   content: '';
-  background: rgba(31, 95, 139, 0.7);
+  background:linear-gradient(to left , rgb(11, 2, 137) , rgb(4, 40, 160)) ;
 }
 #fh5co-testimonial .testimony-slide {
   text-align: center;
@@ -1170,7 +1203,7 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background:linear-gradient(to left , rgb(19, 13, 100) , rgb(1, 18, 74)) ;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -1185,7 +1218,7 @@ h1, h2, h3, h4, h5, h6, figure {
   list-style: none;
 }
 #fh5co-footer .fh5co-footer-links li a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 #fh5co-footer .fh5co-footer-links li a:hover {
@@ -1230,7 +1263,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: absolute;
   z-index: 1901;
   width: 270px;
-  background: black;
+  background: rgb(255, 254, 254);
   top: 0;
   right: 0;
   top: 0;
